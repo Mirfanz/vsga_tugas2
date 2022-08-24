@@ -1,0 +1,8 @@
+Langkah Langkah:
+
+1. Import database vsga_p2.sql dengan nama vsga_p2
+2. Jalankan perintah "php spark serve" di terminal direktori ini
+3. Selesai
+
+atau testing di link di bawah ini:
+https://vsga-testing1.000webhostapp.com/

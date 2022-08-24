@@ -33,6 +33,26 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
+$routes->get('login', 'Account::index');
+$routes->get('logout', 'Account::logout');
+$routes->get('register', 'Account::register');
+$routes->get('register2', 'Account::register2');
+$routes->post('login', 'Account::commitLogin');
+$routes->post('register', 'Account::commitRegister');
+$routes->post('register2', 'Account::commitRegister2');
+$routes->get('login-manajemen', 'Account::loginManajemen');
+
+$routes->get('users', 'User::users');
+$routes->get('profile', 'User::index');
+$routes->get('profile/(:segment)', 'User::profile/$1');
+$routes->get('edit-profile', 'User::editProfile');
+$routes->post('edit-profile', 'User::commitEditProfile');
+
+$routes->get('portofolio', 'Portofolio::index');
+$routes->get('portofolio/post', 'Portofolio::addPortofolio');
+$routes->post('portofolio/post', 'Portofolio::commitAddPortofolio');
+$routes->get('portofolio/(:segment)', 'Portofolio::portofolio/$1');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

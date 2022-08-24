@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="sweetalert.js"></script>
+    <script>
+      swal({
+        title: "Are you sure?",
+        text: "Once deleted, you will not be able to recover this imaginary file!",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      }).then((willDelete) => {
+        if (willDelete) {
+          swal("Poof! Your imaginary file has been deleted!", {
+            icon: "success",
+          });
+        } else {
+          swal("Your imaginary file is safe!");
+        }
+      });
+      
+      swal({
+        title: "Berhasil!",
+        text: "Lain Kali Lebih Bagus Yaaa Manusia Ilang Otaknyaa Makskas Bsavjdss",
+        icon: "success", // warning, success, error, info
+        timer: false,
+
+        className: "text-center",
+        content: {
+          element: "div",
+          attributes: {
+            value: "",
+          },
+        },
+        buttons: {
+          cancel: {
+            text: "Cancel",
+            value: false,
+            visible: true,
+            className: "",
+            closeModal: true,
+          },
+          confirm: {
+            text: "Accept",
+            value: true,
+            visible: true,
+            className: "bg-primary",
+            closeModal: true,
+          },
+        },
+        dangerMode: false,
+        closeOnClickOutside: false,
+        closeOnEsc: true,
+      });
+    </script>
+  </body>
+</html>
